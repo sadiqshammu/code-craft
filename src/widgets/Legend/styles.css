@@ -1,0 +1,29 @@
+.legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.legend .title {
+  text-transform: uppercase;
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  color: #AC6CFF;
+  letter-spacing: 1.5px;
+}
+
+.legend .line {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 1rem;
+  height: 0;
+  border: dotted 0.5px #AC6CFF;
+}
+/*# sourceMappingURL=styles.css.map */

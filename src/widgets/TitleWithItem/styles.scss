@@ -1,0 +1,24 @@
+.title-with-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media(max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  .title {
+    text-transform: capitalize;
+    position: relative;
+    
+    @media(max-width: 767px) {
+      order: 1;
+      flex: 0 0 100%;
+    }
+  }
+
+  .col {
+    @media(max-width: 767px) {
+      order: 0;
+      margin-left: auto;
+    }
+  }
+}

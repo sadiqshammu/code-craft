@@ -1,0 +1,112 @@
+.mode {
+  margin-bottom: 70px;
+  @media(max-width: 767px) {
+    margin-bottom: 50px;
+  }
+
+  /* row alignment & active alignment */
+  .box {
+    .mode-icon {
+      flex: unset;
+      margin-right: 30px;
+      svg {width: 20px; height: auto;}
+      @media(max-width: 767px) {
+        margin-right: 14px;
+      }
+    }
+    .text, .level {
+      flex: 1;
+
+      @media(max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+    .tick-icon {
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+      svg {width: 16px; height: auto; fill: #ccc;}
+    }
+  }
+
+  .item.active .box {
+    .mode-icon, .tick-icon {
+      svg {fill: #fff;}
+    }
+  }
+
+  .legend {
+    margin-bottom: 40px;
+  }
+
+  .item {
+    position: relative;
+    cursor: pointer;
+  
+    span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .box {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding: 16px 22px;
+    justify-content: space-between;
+
+    @media(max-width: 767px) {
+      padding: 14px 6px;
+    }
+    h4 {
+      font-family: 'Montserrat-Regular';
+      font-size: 18px;
+      color: #000;
+      letter-spacing: 0.56px;
+      text-transform: capitalize;
+    }
+    .level {
+      @media(max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  /* toggle list alignment & item active alignment */
+  .toggle-list  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media(max-width: 767px) {
+      flex-wrap: wrap;
+    }
+    .item {
+      flex: 0 0 100%;
+      @media(max-width: 767px) {
+        margin: 0 16px 16px 0;
+      }
+    }
+  }
+
+  .item.active {
+    span {
+      background-image: linear-gradient(-135deg, #AD6BFF 0%, #74BCF7 100%);
+      box-shadow: 0 20px 20px 0 rgba(0,0,0,0.15);
+      width: calc(100% + 12px);
+      height: calc(100% + 6px);
+      left: -6px;
+    }
+    .box h4 {
+      color: #fff; 
+    }
+  }
+}

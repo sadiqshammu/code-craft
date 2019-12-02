@@ -1,0 +1,5 @@
+export * from './Heading'
+export * from './Paragraph'
+export * from './Image'
+export * from './Link'
+export * from './Icon'

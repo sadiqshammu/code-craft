@@ -1,0 +1,70 @@
+.shades {
+  margin-bottom: 70px;
+  @media(max-width: 767px) {
+    margin-bottom: 50px;
+  }
+
+  .legend {
+    margin-bottom: 40px;
+  }
+
+  .item {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+
+    @media(max-width: 640px) {
+      width: 24px;
+      height: 24px;
+      margin: 12px 24px;
+    }
+  
+    .tick-icon {
+      box-shadow: 0 10px 10px 0 rgba(0,0,0,0.15);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 16px;
+        height: auto;
+        fill: none;
+      }
+    }
+  }
+
+  .toggle-list  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media(max-width: 640px) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+  }
+  
+  .item.active {
+    span {
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      left: -6px;
+      box-shadow: 0 27px 27px 0 rgba(0,0,0,0.15);
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}

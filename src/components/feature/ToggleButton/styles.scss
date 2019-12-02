@@ -1,0 +1,16 @@
+.toggle-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: rgb(139, 139, 139);
+  svg {
+    height: 70%;
+    width: auto;
+    fill: #fff;
+  }
+  &[item-select="true"] {
+    background: #2e2e2e;
+    svg { margin-left: auto; }
+  }
+}

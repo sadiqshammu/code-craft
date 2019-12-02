@@ -1,0 +1,19 @@
+.legend {
+  display: flex;
+  align-items: center;
+  .title {
+    text-transform: uppercase;
+    flex: unset;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    color: #AC6CFF;
+    letter-spacing: 1.5px;
+  }
+  .line {
+    flex: 1;
+    margin-left: 1rem;
+    height: 0;
+    border: dotted 0.5px #AC6CFF;
+    
+  }
+}

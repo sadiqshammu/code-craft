@@ -1,0 +1,193 @@
+$menu-box-shadow-desktop: -30px 0px 0 0 #fff inset;
+$menu-box-shadow-tablet: -25px 0px 0 0 #fff inset;
+$menu-box-shadow-mobile: -25px 0px 0 0 #fff inset;
+
+$sideBar-desktop: 410px;
+$sideBar-tablet: 240px;
+$sideBar-mobile: 180px;
+
+$sideBar-shadow-desktop: calc(410px - 30px);
+$sideBar-shadow-tablet: calc(240px - 25px);
+$sideBar-shadow-mobile: calc(180px - 25px);
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  margin: 0;
+}
+.wrapper {
+  &,
+  * {
+    box-sizing: border-box;
+    font-family: "Montserrat-Bold";
+  }
+
+  position: fixed;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  .menu-arrow {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    z-index: 4;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    svg {
+      width: 18px;
+      height: auto;
+      fill: #fff;
+    }
+
+    &.open {
+      transform: rotate(180deg);
+      svg {
+        fill: #2e2e2e;
+      }
+    }
+  }
+
+  .side-bar,
+  .container {
+    position: relative;
+  }
+
+  .side-bar {
+    flex: 0 0 $sideBar-desktop;
+    background-image: linear-gradient(-180deg, #ad6bff 0%, #74bcf7 100%);
+    padding: 120px 70px 100px 40px;
+    z-index: 3;
+    overflow: auto;
+    overflow-x: hidden;
+    box-shadow: $menu-box-shadow-desktop;
+
+    &:before,
+    &:after {
+      content: "";
+      position: fixed;
+      width: $sideBar-shadow-desktop;
+      height: 100px;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      background-image: linear-gradient(-180deg, #ad6bff 0%, #ad6bff00 100%);
+      @media (max-width: 1024px) {
+        width: $sideBar-shadow-tablet;
+      }
+      @media (max-width: 767px) {
+        width: $sideBar-shadow-mobile;
+      }
+    }
+
+    &:after {
+      content: "";
+      bottom: 0;
+      top: auto;
+      background-image: linear-gradient(-180deg, #74bcf700 0%, #74bcf7 100%);
+    }
+
+    &.close {
+      flex: 0 0 0px;
+      padding: 120px 0px;
+      opacity: 0;
+    }
+
+    @media (max-width: 1024px) {
+      flex: 0 0 $sideBar-tablet;
+      padding: 100px 60px 100px 40px;
+      box-shadow: $menu-box-shadow-tablet;
+    }
+    @media (max-width: 767px) {
+      flex: 0 0 $sideBar-mobile;
+      padding: 80px 40px 80px 20px;
+      box-shadow: $menu-box-shadow-mobile;
+    }
+  }
+
+  .container {
+    flex: 1;
+    padding: 30px 60px;
+    overflow: auto;
+    position: relative;
+    z-index: 1;
+
+    &.close {
+      .header .title {
+        text-indent: 0;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 30px;
+    }
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
+  }
+
+  .header {
+    margin-bottom: 82px;
+    @media (max-width: 767px) {
+      margin-bottom: 45px;
+    }
+    .plus-icon {
+      width: 56px;
+      height: 56px;
+      background-image: linear-gradient(-135deg, #deffc9 0%, #a3f8ff 100%);
+      font-family: "Montserrat-Medium";
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 767px) {
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        font-size: 32px;
+      }
+    }
+    .title {
+      font-family: "Montserrat-Bold";
+      font-size: 48px;
+      color: #000;
+      letter-spacing: 8.4px;
+      text-transform: uppercase;
+
+      @media (max-width: 767px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .bed-lamp-toggle {
+    margin-bottom: 66px;
+    @media (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+
+    .title {
+      font-family: Montserrat-Bold;
+      font-size: 32px;
+      color: #000000;
+      letter-spacing: 5.12px;
+      text-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+      text-transform: uppercase;
+
+      @media (max-width: 767px) {
+        font-size: 25px;
+      }
+    }
+
+    .toggle-btn {
+      box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+}
