@@ -10,12 +10,12 @@ $sideBar-shadow-desktop: calc(410px - 30px);
 $sideBar-shadow-tablet: calc(240px - 25px);
 $sideBar-shadow-mobile: calc(180px - 25px);
 
-::-webkit-scrollbar {
-  width: 0px;
-}
-
 body {
   margin: 0;
+
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 .wrapper {
   &,
