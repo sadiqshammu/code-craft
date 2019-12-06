@@ -12,7 +12,7 @@ function ToggleList(props) {
     list = [],
     selectIdx = 0,
     renderItem = defaultRenderItem,
-    isValidate = false,
+    type = "",
     ...rest
   } = props
   const [activeIdx, setActiveIdx] = React.useState(selectIdx)
@@ -23,13 +23,16 @@ function ToggleList(props) {
         <div className={`toggle-list ${className}`} {...rest}>
           {list.map((item, index) => {
             const classes = activeIdx === index ? "active" : ""
+            type === "mode" &&
+              getContext.level === 0 &&
+              getContext.setLevel(list[selectIdx].level)
             return (
               <div
                 key={index}
                 className={`item ${classes}`}
                 onClick={() => {
-                  isValidate && getContext.setLevel(list[index].level)
-                  getContext.setMenuLabel(list[index].title)
+                  type === "mode" && getContext.setLevel(list[index].level)
+                  type === "menu" && getContext.setMenuLabel(list[index].title)
                   setActiveIdx(index)
                 }}
                 children={renderItem(item)}

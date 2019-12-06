@@ -64,6 +64,7 @@ function MenuBar(props) {
         {...props}
         list={menuList}
         renderItem={renderCustomItem}
+        type="menu"
       />
     </section>
   )

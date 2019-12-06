@@ -49,7 +49,7 @@ function Mode(props) {
         {...props}
         list={shadeList}
         renderItem={renderCustomItem}
-        isValidate={true}
+        type="mode"
       />
     </section>
   )
