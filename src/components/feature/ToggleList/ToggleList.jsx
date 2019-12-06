@@ -29,6 +29,7 @@ function ToggleList(props) {
                 className={`item ${classes}`}
                 onClick={() => {
                   isValidate && getContext.setLevel(list[index].level)
+                  getContext.setMenuLabel(list[index].title)
                   setActiveIdx(index)
                 }}
                 children={renderItem(item)}

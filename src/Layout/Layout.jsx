@@ -31,8 +31,9 @@ function Layout(props) {
 
           <Content.TitleWithItem
             className="bed-lamp-toggle"
-            text="bed lamp"
+            text={"bed lamp"}
             type="h3"
+            isValidate={true}
           >
             <Feature.ToggleButton size={42} bgColor="#000" />
           </Content.TitleWithItem>

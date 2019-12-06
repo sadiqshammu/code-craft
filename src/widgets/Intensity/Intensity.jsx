@@ -21,6 +21,7 @@ function Intensity(props) {
           max={100}
           rotationOffset={0}
           strokeWidth={2}
+          onChange={value => getContext.setLevel(value)}
         />
         <span className="count">{getContext.level}</span>
       </div>
